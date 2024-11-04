@@ -29,7 +29,7 @@ api_key = os.getenv('AZURE_OPENAI_API_KEY',"d7fd42addeff4f4a91f9beea8996f4cc")
 
 vector_store_name = os.getenv('VECTOR_STORE_NAME', 'VS-final')
 low_temp_param = float(os.getenv('LOW_TEMP_PARAM', 0.3))
-high_temp_param = float(os.getenv('HIGH_TEMP_PARAM', 0.7))
+high_temp_param = float(os.getenv('HIGH_TEMP_PARAM', 0.4))
 
 
 similarity_search_k= int(os.getenv('SIMILARITY_SEARCH_K', 5))

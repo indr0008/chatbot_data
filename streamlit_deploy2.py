@@ -84,10 +84,24 @@ def chain_prompt_1():
                 elif query_type == "INSERT" or query_type == "DELETE" or query_type == "UPDATE":
                     # Handle INSERT or DELETE query
                     db.run(query)
-                    result = f"{query_type} query executed successfully."
+                    result = f"{query_type} query run successfully."
                     print("result: -->", result)
                 else:
                     result = "Unsupported query type"
+
+#                 with db.connect() as conn:
+#                     if query_type == "SELECT":
+#                         # Handle SELECT query
+#                         result = conn.run(query)
+#                         print("result: -->", result)
+#                     elif query_type in ["INSERT", "DELETE", "UPDATE"]:
+#                         # Handle INSERT, DELETE, or UPDATE query
+#                         conn.run(query)
+#                         conn.commit()  # Ensure changes are committed
+#                         result = f"{query_type} query executed successfully."
+#                         print("result: -->", result)
+#                     else:
+#                         result = "Unsupported query type"
                 
                 return result
             
